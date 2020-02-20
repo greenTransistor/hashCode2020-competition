@@ -16,10 +16,11 @@ using namespace std;
 
 struct Answer {
 	vector<long long> librariesIndexes;
-	vector<vector<long long> > booksIndexesIndexes;
+	vector<vector<long long> > booksIndexesPerLibrary;
 };
 
 struct Book {
+	long long index;
 	long long score;
 	bool isScanned;
 };
@@ -68,10 +69,10 @@ void readInputFile(string name) {
 }
 
 void init() {
-	for (int i = 0; i < books.size(); i++) {
+	for (size_t i = 0; i < books.size(); i++) {
 		books[i].isScanned = false;
 	}
-	for (int i = 0; i < libraries.size(); i++) {
+	for (size_t i = 0; i < libraries.size(); i++) {
 		books[i].isSigned = false;
 	}
 }
