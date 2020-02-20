@@ -8,3 +8,7 @@ debug.cpp
 test.cpp
 output.*
 *.out
+CMakeLists.txt
+cmake-build-debug
+.DS_Store
+.idea
