@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/Users/rostyslavm/CLionProjects/hash-code-2020/hashCode2020-competition/greedyAlgorithm/greedyAlgorithm.cpp
+pickBestLibrary.cpp
+/Users/rostyslavm/CLionProjects/hash-code-2020/hashCode2020-competition/greedyAlgorithm/pickBestLibrary.cpp
+
+/Users/rostyslavm/CLionProjects/hash-code-2020/hashCode2020-competition/greedyAlgorithm/pickBestLibrary.cpp
+
 /Users/rostyslavm/CLionProjects/hash-code-2020/hashCode2020-competition/main.cpp
 algorithm
 -
@@ -33,4 +39,6 @@ utility
 -
 vector
 -
+greedyAlgorithm/greedyAlgorithm.cpp
+/Users/rostyslavm/CLionProjects/hash-code-2020/hashCode2020-competition/greedyAlgorithm/greedyAlgorithm.cpp
 
