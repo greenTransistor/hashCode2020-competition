@@ -11,7 +11,7 @@ std::pair<Library*, std::vector<Book*> > pickBestLibrary(long long daysRemained)
 
 		long long cnt = 0;
 		for (long long i = 0; i < library.books.size() && cnt < (daysRemained-library.daysToSignIn)*library.booksPerDay; i++){
-			auto book = library.books[i];
+			auto* book = library.books[i];
 			if (book->isScanned) continue;
 
 			score += book->score;

@@ -108,12 +108,12 @@ void registerAnswer(Answer newAnswer) {
 	long long booksFromCurrentLibrary;
 
 	for (Library library : libraries) {
-		totalDays -= library.daysToSignIn;
+		daysRemaining -= library.daysToSignIn;
 		booksFromCurrentLibrary = 0;
 		for (Book* book : library.books) {
 			newScore += book->score;
 			booksFromCurrentLibrary++;
-			if (booksFromCurrentLibrary == totalDays * library.booksPerDay) {
+			if (booksFromCurrentLibrary == daysRemaining * library.booksPerDay) {
 				break;
 			}
 		}
