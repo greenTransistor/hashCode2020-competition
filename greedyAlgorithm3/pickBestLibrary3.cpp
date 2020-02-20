@@ -1,5 +1,5 @@
 
-std::pair<Library*, std::vector<Book*> > pickBestLibrary(long long daysRemained){
+std::pair<Library*, std::vector<Book*> > pickBestLibrary3(long long daysRemained){
 	Library* bestLib = nullptr;
 	std::vector<Book*> bestLibBooks;
 	long long bestScore = 0;

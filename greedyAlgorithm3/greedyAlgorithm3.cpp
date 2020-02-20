@@ -1,7 +1,7 @@
-#include "pickBestLibrary.cpp"
+#include "pickBestLibrary3.cpp"
 
-void addBestLibrary(Answer& answer, long long& daysRemaining, bool& allLibrariesSigned) {
-	pair<Library*, vector<Book*>> bestLibraryAndBooks = pickBestLibrary(daysRemaining);
+void addBestLibrary3(Answer& answer, long long& daysRemaining, bool& allLibrariesSigned) {
+	pair<Library*, vector<Book*>> bestLibraryAndBooks = pickBestLibrary3(daysRemaining);
 	Library* bestLibrary = bestLibraryAndBooks.first;
 
 	if (bestLibrary == nullptr) {
@@ -22,12 +22,12 @@ void addBestLibrary(Answer& answer, long long& daysRemaining, bool& allLibraries
 	daysRemaining -= bestLibrary->daysToSignIn;
 }
 
-Answer greedyAlgorithm() {
+Answer greedyAlgorithm3() {
 	Answer answer;
 	long long daysRemaining = totalDays;
 	bool allLibrariesSigned = false;
 	while (daysRemaining > 0 && !allLibrariesSigned) {
-		addBestLibrary(answer, daysRemaining, allLibrariesSigned);
+		addBestLibrary3(answer, daysRemaining, allLibrariesSigned);
 	}
 	return answer;
 }
