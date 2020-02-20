@@ -1,0 +1,10 @@
+# ignore files without extension (because linux executables do not depend on extension)
+*
+!/**/
+!*.*
+*.o
+*.exe
+debug.cpp
+test.cpp
+output.*
+*.out
