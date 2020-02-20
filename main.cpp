@@ -46,6 +46,8 @@ Answer bestAnswer;
 
 #include "greedyAlgorithm/greedyAlgorithm.cpp"
 
+#include "writeOutputFile.cpp"
+
 const int FILES_COUNT = 6;
 const string FILE_NAMES[FILES_COUNT] = {"a_example", "b_read_on", "c_incunabula", "d_tough_choices", "e_so_many_books", "f_libraries_of_the_world"};
 string fileName, inputFileName, outputFileName;
@@ -119,10 +121,6 @@ void registerAnswer(Answer newAnswer) {
 		bestScore = newScore;
 		bestAnswer = newAnswer;
 	}
-}
-
-void writeOutputFile(string name) {
-	// bestAnswer
 }
 
 int main() {

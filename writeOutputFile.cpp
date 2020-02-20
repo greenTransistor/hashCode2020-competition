@@ -5,7 +5,7 @@ void writeOutputFile(string name) {
 
 	for (long long i = 0; i < bestAnswer.libraries.size(); i++) {
 		Library* library = bestAnswer.libraries[i];
-		vector<Book*> books = bestAnswer.booksPerDay[i];
+		vector<Book*> books = bestAnswer.booksPerLibrary[i];
 
 		fout << library->index << " " << books.size() << endl;
 		for (Book* book: books) {
