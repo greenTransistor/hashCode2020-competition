@@ -3,6 +3,7 @@ std::pair<Library*, std::vector<Book*> > pickBestLibrary(long long daysRemained)
 	Library* bestLib = nullptr;
 	std::vector<Book*> bestLibBooks;
 	long long bestScore = 0;
+	long long bestDaysToSignIn = 1;
 
 	for (auto& library : libraries){
 		if (library.isSigned || library.daysToSignIn >= daysRemained) continue;
@@ -19,8 +20,9 @@ std::pair<Library*, std::vector<Book*> > pickBestLibrary(long long daysRemained)
 			cnt++;
 		}
 
-		if (score > bestScore){
+		if (score * bestDaysToSignIn > bestScore * library.daysToSignIn){
 			bestScore = score;
+			bestDaysToSignIn = library.daysToSignIn;
 			bestLib = &library;
 			bestLibBooks = books;
 		}
