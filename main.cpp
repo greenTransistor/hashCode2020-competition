@@ -14,15 +14,21 @@
 
 using namespace std;
 
+struct Answer {
+	vector<long long> librariesIndexes;
+	vector<vector<long long> > booksIndexesIndexes;
+};
+
 struct Book {
 	long long score;
 	bool isScanned;
-}
+};
 
 struct Library {
 	long long booksPerDay;
 	long long daysToSignIn;
-	vector<long long> books;
+	bool isSigned;
+	vector<Book*> books;
 };
 
 // GLOBAL VARS {
@@ -43,14 +49,31 @@ void readInputFile(string name) {
 	ifstream inf(name);
 	long long booksCount;
 	long long librariesCount;
-	book newBook;
-	library newLibrary;
+	Book newBook;
+	Library newLibrary;
+	size_t i;
 
 	inf >> booksCount >> librariesCount >> totalDays;
 	books.resize(booksCount);
 	libraries.resize(librariesCount);
+	for (i = 0; i < booksCount; i++) {
+		newBook = Book();
+		inf >> newBook.score;
+	}
+	for (i = 0; i < librariesCount; i++) {
+		newLibrary = Library();
+	}
 
 	inf.close();
+}
+
+void init() {
+	for (int i = 0; i < books.size(); i++) {
+		books[i].isScanned = false;
+	}
+	for (int i = 0; i < libraries.size(); i++) {
+		books[i].isSigned = false;
+	}
 }
 
 int main() {
