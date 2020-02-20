@@ -51,7 +51,7 @@ const string FILE_NAMES[FILES_COUNT] = {"a_example", "b_read_on", "c_incunabula"
 string fileName, inputFileName, outputFileName;
 
 bool booksComparator(Book* book1, Book* book2) {
-	return (book1->score < book2->score);
+	return (book1->score > book2->score);
 }
 
 void init() {
