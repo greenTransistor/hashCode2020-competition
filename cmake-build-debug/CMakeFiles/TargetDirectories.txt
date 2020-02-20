@@ -1,0 +1,3 @@
+/Users/rostyslavm/CLionProjects/hash-code-2020/hashCode2020-competition/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/rostyslavm/CLionProjects/hash-code-2020/hashCode2020-competition/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/rostyslavm/CLionProjects/hash-code-2020/hashCode2020-competition/cmake-build-debug/CMakeFiles/untitled2.dir

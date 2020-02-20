@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/rostyslavm/CLionProjects/hash-code-2020/hashCode2020-competition/main.cpp
+algorithm
+-
+cmath
+-
+cstdlib
+-
+cstdio
+-
+ctime
+-
+fstream
+-
+iostream
+-
+iomanip
+-
+map
+-
+queue
+-
+set
+-
+utility
+-
+vector
+-
+
