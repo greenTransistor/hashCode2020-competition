@@ -14,22 +14,23 @@
 
 using namespace std;
 
-struct Answer {
-	vector<long long> librariesIndexes;
-	vector<vector<long long> > booksIndexesPerLibrary;
-};
-
 struct Book {
 	long long index;
-	long long score;
 	bool isScanned;
+	long long score;
 };
 
 struct Library {
+	vector<Book*> books;
 	long long booksPerDay;
 	long long daysToSignIn;
+	long long index;
 	bool isSigned;
-	vector<Book*> books;
+};
+
+struct Answer {
+	vector<Library*> libraries;
+	vector<vector<Book*> > booksPerLibrary;
 };
 
 // GLOBAL VARS {
@@ -45,6 +46,15 @@ long long bestScore = 0;
 const int FILES_COUNT = 6;
 const string FILE_NAMES[FILES_COUNT] = {"a_example", "b_read_on", "c_incunabula", "d_tough_choices", "e_so_many_books", "f_libraries_of_the_world"};
 string fileName, inputFileName, outputFileName;
+
+void init() {
+	for (size_t i = 0; i < books.size(); i++) {
+		books[i].isScanned = false;
+	}
+	for (size_t i = 0; i < libraries.size(); i++) {
+		libraries[i].isSigned = false;
+	}
+}
 
 void readInputFile(string name) {
 	ifstream inf(name);
@@ -68,13 +78,8 @@ void readInputFile(string name) {
 	inf.close();
 }
 
-void init() {
-	for (size_t i = 0; i < books.size(); i++) {
-		books[i].isScanned = false;
-	}
-	for (size_t i = 0; i < libraries.size(); i++) {
-		books[i].isSigned = false;
-	}
+void writeOutputFile(string name) {
+	//
 }
 
 int main() {
