@@ -26,7 +26,7 @@ void greedyAlgorithm() {
 	Answer answer;
 	long long daysRemaining = totalDays;
 	bool allLibrariesSigned = false;
-	while (daysRemaining && !allLibrariesSigned) {
+	while (daysRemaining > 0 && !allLibrariesSigned) {
 		addBestLibrary(answer, daysRemaining, allLibrariesSigned);
 	}
 }
