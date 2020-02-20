@@ -82,7 +82,7 @@ void readInputFile(string name) {
 	for (i = 0; i < booksCount; i++) {
 		newBook = Book();
 		inf >> newBook.score;
-		newBook->index = i;
+		newBook.index = i;
 		books[i] = newBook;
 	}
 	for (i = 0; i < librariesCount; i++) {
@@ -95,7 +95,7 @@ void readInputFile(string name) {
 			newLibrary.books[j] = &books[bookIndex];
 		}
 		sort(newLibrary.books.begin(), newLibrary.books.end(), booksComparator);
-		newLibrary->index = i;
+		newLibrary.index = i;
 		libraries[i] = newLibrary;
 	}
 
