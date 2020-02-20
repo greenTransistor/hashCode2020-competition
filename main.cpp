@@ -104,18 +104,12 @@ void readInputFile(string name) {
 
 void registerAnswer(Answer newAnswer) {
 	long long newScore = 0;
-	long long daysRemaining = totalDays;
-	long long booksFromCurrentLibrary;
 
-	for (Library library : libraries) {
-		totalDays -= library.daysToSignIn;
-		booksFromCurrentLibrary = 0;
-		for (Book* book : library.books) {
+	for (long long i = 0; i < newAnswer.libraries.size(); i++) {
+		vector<Book*> booksForLib = newAnswer.booksPerLibrary[i];
+
+		for (Book* book: booksForLib) {
 			newScore += book->score;
-			booksFromCurrentLibrary++;
-			if (booksFromCurrentLibrary == totalDays * library.booksPerDay) {
-				break;
-			}
 		}
 	}
 
