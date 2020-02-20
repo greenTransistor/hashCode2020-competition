@@ -46,6 +46,7 @@ Answer bestAnswer;
 
 #include "greedyAlgorithm/greedyAlgorithm.cpp"
 #include "greedyAlgorithm2/greedyAlgorithm2.cpp"
+#include "greedyAlgorithm3/greedyAlgorithm3.cpp"
 
 #include "writeOutputFile.cpp"
 
@@ -134,6 +135,9 @@ int main() {
 
 		init();
 		registerAnswer(greedyAlgorithm2());
+
+		init();
+		registerAnswer(greedyAlgorithm3());
 
 		writeOutputFile(outputFileName);
 		cout << "For dataset #" << fileIndex << " '" << fileName << "' the best score is " << bestScore << "\n";
