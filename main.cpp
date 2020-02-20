@@ -98,6 +98,29 @@ void readInputFile(string name) {
 	inf.close();
 }
 
+void registerAnswer(Answer newAnswer) {
+	long long newScore = 0;
+	long long daysRemaining = totalDays;
+	long long booksFromCurrentLibrary;
+
+	for (Library library : libraries) {
+		totalDays -= library.daysToSignIn;
+		booksFromCurrentLibrary = 0;
+		for (Book* book : library.books) {
+			newScore += book->score;
+			booksFromCurrentLibrary++;
+			if (booksFromCurrentLibrary == totalDays * library.booksPerDay) {
+				break;
+			}
+		}
+	}
+
+	if (newScore > bestScore) {
+		bestScore = newScore;
+		bestAnswer = newAnswer;
+	}
+}
+
 void writeOutputFile(string name) {
 	// bestAnswer
 }
@@ -111,10 +134,10 @@ int main() {
 
 		bestScore = 0;
 		init();
-		greedyAlgorithm();
+		registerAnswer(greedyAlgorithm());
 
 		//init();
-		//algorithm2();
+		//registerAnswer(algorithm2());
 
 		writeOutputFile(outputFileName);
 		cout << "For dataset #" << fileIndex << " '" << fileName << "' the best score is " << bestScore << "\n";
