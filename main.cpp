@@ -126,6 +126,7 @@ void registerAnswer(Answer newAnswer) {
 }
 
 int main() {
+	long long scoreSum = 0;
 	for (size_t fileIndex = 0; fileIndex < FILES_COUNT; fileIndex++) {
 		fileName = FILE_NAMES[fileIndex];
 		inputFileName = fileName + ".in";
@@ -141,7 +142,11 @@ int main() {
 
 		writeOutputFile(outputFileName);
 		cout << "For dataset #" << fileIndex << " '" << fileName << "' the best score is " << bestScore << "\n";
+
+		scoreSum += bestScore;
 	}
+
+	cout << "Total score is " << scoreSum << endl;
 
 	return 0;
 }

@@ -4,4 +4,5 @@
 CMakeFiles/untitled2.dir/main.cpp.o: ../greedyAlgorithm/greedyAlgorithm.cpp
 CMakeFiles/untitled2.dir/main.cpp.o: ../greedyAlgorithm/pickBestLibrary.cpp
 CMakeFiles/untitled2.dir/main.cpp.o: ../main.cpp
+CMakeFiles/untitled2.dir/main.cpp.o: ../writeOutputFile.cpp
 
