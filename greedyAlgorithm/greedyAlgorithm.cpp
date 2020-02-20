@@ -22,11 +22,12 @@ void addBestLibrary(Answer& answer, long long& daysRemaining, bool& allLibraries
 	daysRemaining -= bestLibrary->daysToSignIn;
 }
 
-void greedyAlgorithm() {
+Answer greedyAlgorithm() {
 	Answer answer;
 	long long daysRemaining = totalDays;
 	bool allLibrariesSigned = false;
 	while (daysRemaining > 0 && !allLibrariesSigned) {
 		addBestLibrary(answer, daysRemaining, allLibrariesSigned);
 	}
+	return answer;
 }
